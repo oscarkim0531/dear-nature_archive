@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f6f5f1" />
+    <title>Dear Nature — 시조와 장면의 아카이브</title>
+    <meta name="description" content="자연을 향해 말하는 시조와 이를 극으로 재해석한 대본의 아카이브." />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./archive-data.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <main>
+      <header class="masthead">
+        <div class="eyebrow"><span class="mark">物</span><span>시조 × 극 · 작업 아카이브</span></div>
+        <div class="title-row">
+          <h1>Dear Nature<span class="title-dot">.</span></h1>
+          <p class="count" aria-label="수록 작품 여섯 편"><span id="entry-count">06</span><small>entries</small></p>
+        </div>
+        <p class="intro">자연에게 건넨 말을 모아, 하나의 장면으로 다시 읽는다. 표에는 작품과 해석의 기록을, 대본에는 그 말이 움직이는 순간을 담았다.</p>
+      </header>
+
+      <section class="archive" aria-labelledby="archive-title">
+        <div class="section-head">
+          <h2 id="archive-title">Archive <span>selected 06</span></h2>
+          <p>가로로 넘겨 모든 항목을 볼 수 있습니다. <span aria-hidden="true">↔</span></p>
+        </div>
+        <div class="table-scroll" role="region" aria-label="시조 아카이브 표" tabindex="0">
+          <table>
+            <caption>작업한 여섯 편의 시조와 각색 대본</caption>
+            <colgroup>
+              <col class="col-index" /><col class="col-title" /><col class="col-original" />
+              <col class="col-modern" /><col class="col-author" /><col class="col-source" />
+              <col class="col-period" /><col class="col-addressee" /><col class="col-attitude" />
+              <col class="col-role" /><col class="col-script" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th scope="col">Index</th>
+                <th scope="col">작품명</th>
+                <th scope="col">작품 원문</th>
+                <th scope="col">현대어 풀이</th>
+                <th scope="col">작가</th>
+                <th scope="col">출전</th>
+                <th scope="col">창작 시기</th>
+                <th scope="col">자연 청자 <span class="th-note">/ 극의 배역</span></th>
+                <th scope="col">발화 태도 <span class="th-note">/ 구체적</span></th>
+                <th scope="col">부여한 역할</th>
+                <th scope="col">대본</th>
+              </tr>
+            </thead>
+            <tbody id="archive-body"></tbody>
+          </table>
+        </div>
+        <p class="source-note">작품 정보와 원문은 《Dear Nature》 8주차 아카이브 시트의 작업 표시 항목을 기준으로 옮겼습니다. 대본은 같은 시기의 작업 PDF를 웹에서 읽기 쉽게 순서대로 정리했습니다.</p>
+      </section>
+    </main>
+
+    <dialog id="script-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-top">
+        <span class="dialog-kicker" id="dialog-index"></span>
+        <button id="dialog-close" class="close-button" type="button" aria-label="대본 닫기">닫기 <span aria-hidden="true">×</span></button>
+      </div>
+      <div class="dialog-content">
+        <h2 id="dialog-title"></h2>
+        <p class="dialog-subtitle" id="dialog-subtitle"></p>
+        <div id="script-content" class="script-content"></div>
+      </div>
+    </dialog>
+  </body>
+</html>
