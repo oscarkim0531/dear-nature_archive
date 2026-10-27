@@ -41,7 +41,6 @@ h1 { margin: 0; font-size: clamp(54px, 8.5vw, 126px); line-height: .94; font-wei
 
 .scene-detail { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: 'reference image' 'script image'; column-gap: clamp(32px, 5vw, 96px); align-items: start; padding: 34px 0 72px; }
 .scene-reference { grid-area: reference; min-width: 0; }
-.detail-kicker { margin: 0 0 31px; color: var(--accent); font-family: var(--mono); font-size: 11px; letter-spacing: .04em; }
 .reference-block { margin: 0 0 29px; }
 .reference-block h3, .scene-script h3 { margin: 0 0 10px; color: var(--muted); font-size: 11px; font-weight: 600; letter-spacing: .04em; }
 .reference-block p { margin: 0; font-size: 13px; line-height: 1.9; word-break: keep-all; }
@@ -88,7 +87,6 @@ h1 { margin: 0; font-size: clamp(54px, 8.5vw, 126px); line-height: .94; font-wei
   .scene-number { font-size: 10px; }
   .scene-action { font-size: 21px; }
   .scene-detail { padding: 27px 0 48px; row-gap: 26px; }
-  .detail-kicker { margin-bottom: 23px; }
   .metadata > div { grid-template-columns: 85px minmax(0, 1fr); gap: 8px; }
   .script-row { grid-template-columns: 58px minmax(0, 1fr); gap: 10px; font-size: 11px; }
   .script-speaker { font-size: 10px; }
