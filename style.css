@@ -34,7 +34,8 @@ h1 { margin: 0; font-size: clamp(54px, 8.5vw, 126px); line-height: .94; font-wei
 .scene summary:hover { border-left-color: var(--accent); }
 .scene summary:hover .scene-title { color: var(--accent); }
 .scene summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
-.scene[open] > summary { position: sticky; top: 16px; z-index: 3; background: var(--ink); border-left-color: transparent; color: var(--paper); }
+.scene[open] > summary { position: sticky; top: 16px; z-index: 3; background: var(--ink); border-left-color: var(--accent); color: var(--paper); }
+.scene[open] > summary::before { content: ''; position: absolute; top: -16px; left: -4px; right: 0; height: 16px; background: var(--paper); }
 .scene[open] > summary .scene-title, .scene[open] > summary .scene-number, .scene[open] > summary .scene-action { color: var(--paper); }
 .scene[open] > summary:hover .scene-title { color: var(--paper); }
 .scene-number { color: var(--accent); font-family: var(--mono); font-size: 11px; white-space: nowrap; }
@@ -42,7 +43,7 @@ h1 { margin: 0; font-size: clamp(54px, 8.5vw, 126px); line-height: .94; font-wei
 .scene-action { justify-self: end; color: var(--accent); font-size: 24px; font-weight: 300; line-height: 1; transition: transform .2s ease; }
 .scene[open] .scene-action { transform: rotate(45deg); }
 
-.scene-detail { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: 'reference image' 'script image'; column-gap: clamp(32px, 5vw, 96px); align-items: start; margin-bottom: 30px; padding: 38px 24px 64px 34px; border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent); }
+.scene-detail { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: 'reference image' 'script image'; column-gap: clamp(32px, 5vw, 96px); align-items: start; margin-bottom: 30px; padding: 38px 24px 64px 34px; border-left: 4px solid var(--accent); border-right: 2px solid var(--accent); border-bottom: 2px solid var(--accent); }
 .scene-reference { grid-area: reference; min-width: 0; }
 .reference-block { margin: 0 0 29px; }
 .reference-block h3, .scene-script h3 { margin: 0 0 10px; color: var(--muted); font-size: 11px; font-weight: 600; letter-spacing: .04em; }
